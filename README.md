@@ -31,11 +31,13 @@ Ex : `dd if=windows2022.img | gzip -c > windows2022.gz`
 
 `sudo ufw allow 'Apache'`
 
+## 9. Access your file in browser & backup or download your file : 
 
-## DONE
+`cp windowsxxxx.gz /var/www/html/` > windowsxxxx. change your windows file. 
 
-## 9. Access your file in browser & backup or download your file : `cp windowsxxxx.gz /var/www/html/` > windowsxxxx. change your windows file. Ex : `cp windows2022.gz /var/www/html/`
+Ex : `cp windows2022.gz /var/www/html/`
 
-## 10. Open browser & access this. to download your OS Windows after setting : `http://127.0.0.1/windowsxxxx.gz` >> change 127.0.0.1 to your IP VPS & windowsxxxx to your windows file
+## 10. Open browser & access this. to download your OS Windows after setting : 
 
+`http://127.0.0.1/windowsxxxx.gz` >> change 127.0.0.1 to your IP VPS & windowsxxxx to your windows file
 
