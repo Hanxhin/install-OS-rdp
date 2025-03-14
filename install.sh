@@ -14,7 +14,7 @@ echo "2. Windows Server 2019"
 echo "3. Windows Server 2022"
 read -p "Masukkan pilihan Anda (1-3): " choice
 
-# Set variabel ISO dan image file sesuai pilihan
+# Set variabel ISO dan image file sesuai pilihan user
 case $choice in
     1)
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
@@ -37,25 +37,22 @@ case $choice in
         ;;
 esac
 
-# Mulai proses download ISO dengan tampilan progress secara real time
 echo ""
-echo "Memulai download ${iso_file}..."
+echo "Selected version: $img_file"
+
+# Create a raw image file with the chosen name
+qemu-img create -f raw "$img_file" 40G
+echo "Image file $img_file created successfully."
+
+# Download Virtio driver ISO
+wget --progress=bar:force:noscroll -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
+echo "Virtio driver ISO downloaded successfully."
+
+# Download Windows ISO with the chosen name
 wget --progress=bar:force:noscroll -O "$iso_file" "$iso_link"
-if [ $? -ne 0 ]; then
-    echo "Download gagal. Keluar."
-    exit 1
-fi
-echo "Download ${iso_file} selesai."
+echo "Windows ISO downloaded successfully."
 
-# Membuat image disk jika belum ada
-if [ ! -f "$img_file" ]; then
-    echo "Membuat image disk ${img_file} dengan ukuran 40G..."
-    qemu-img create -f raw "$img_file" 40G
-fi
-
-# Langsung menjalankan QEMU dengan konfigurasi yang ditentukan
-echo ""
-echo "Menjalankan QEMU..."
+# Menjalankan QEMU dengan konfigurasi yang telah ditentukan
 qemu-system-x86_64 \
 -m 4G \
 -cpu host \
