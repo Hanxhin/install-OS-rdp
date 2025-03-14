@@ -15,7 +15,7 @@ chmod +x install.sh
 
 ## 4. Install & setting your OS. ( u can check in this video ) >> [YOUTUBE SHARE IT HUB - TUTORIAL INSTALL OS RDP](youtube.com)
 
-## 5. `CTRL+C` script OS downlaoder.
+## 5. `CTRL+C` script OS downloader.
 
 ## 6. Copy this code to compress file Windows after your setting :
 
