@@ -12,7 +12,7 @@ clear
 
 # Tampilkan banner
 echo -e "${BLUE}==========================================${NC}"
-echo -e "${GREEN}     SHARE IT HUB - AUTO DOWNLOAD OS     ${NC}"
+echo -e "${GREEN} ISO Windows Downlaoder - SHARE IT HUB    ${NC}"
 echo -e "${BLUE}==========================================${NC}"
 echo ""
 
@@ -82,6 +82,15 @@ if [ ! -f "virtio-win.iso" ]; then
     wget --progress=bar:force:noscroll -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
 fi
 
+# Periksa apakah KVM tersedia
+if [ -e /dev/kvm ]; then
+    echo -e "${GREEN}KVM module terdeteksi. Menggunakan akselerasi hardware.${NC}"
+    kvm_flag="-enable-kvm"
+else
+    echo -e "${YELLOW}KVM module tidak terdeteksi. Menjalankan tanpa akselerasi hardware.${NC}"
+    kvm_flag=""
+fi
+
 # Menjalankan QEMU dengan parameter yang menyesuaikan versi OS yang dipilih
 echo ""
 echo -e "${GREEN}Menjalankan QEMU dengan konfigurasi untuk ${iso_file} dan ${img_file}...${NC}"
@@ -89,7 +98,7 @@ echo -e "${GREEN}Menjalankan QEMU dengan konfigurasi untuk ${iso_file} dan ${img
 qemu-system-x86_64 \
 -m 4G \
 -cpu host \
--enable-kvm \
+$kvm_flag \
 -boot order=d \
 -drive file="$iso_file",media=cdrom \
 -drive file="$img_file",format=raw,if=virtio \
