@@ -12,7 +12,7 @@ clear
 
 # Tampilkan banner
 echo -e "${BLUE}==========================================${NC}"
-echo -e "${GREEN}     Microsoft OS ISO -SHARE IT HUB      ${NC}"
+echo -e "${GREEN}     SHARE IT HUB - AUTO DOWNLOAD OS     ${NC}"
 echo -e "${BLUE}==========================================${NC}"
 echo ""
 
@@ -52,10 +52,10 @@ case $choice in
         ;;
 esac
 
-# Mulai proses download ISO OS
+# Mulai proses download ISO OS dengan tampilan real-time
 echo ""
 echo -e "${GREEN}Memulai download ${iso_file}...${NC}"
-wget -O "$iso_file" "$iso_link"
+wget --progress=bar:force:noscroll -O "$iso_file" "$iso_link"
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Download ${iso_file} selesai.${NC}"
@@ -76,10 +76,10 @@ if [ ! -f "$img_file" ]; then
     qemu-img create -f raw "$img_file" 40G
 fi
 
-# Mendownload ISO VirtIO jika belum ada
+# Mendownload ISO VirtIO jika belum ada, dengan tampilan real-time
 if [ ! -f "virtio-win.iso" ]; then
     echo -e "${GREEN}Mendownload VirtIO driver ISO...${NC}"
-    wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
+    wget --progress=bar:force:noscroll -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
 fi
 
 # Menjalankan QEMU dengan parameter yang menyesuaikan versi OS yang dipilih
