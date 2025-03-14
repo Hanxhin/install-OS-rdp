@@ -19,7 +19,8 @@ chmod +x install.sh
 
 ## 6. Copy this code to compress file Windows after your setting :
 
-`dd if=windowsxxxx.img | gzip -c > windowsxxxx.gz` > windowsxxx. change to your windows file. Ex : `dd if=windows2022.img | gzip -c > windows2022.gz`
+`dd if=windowsxxxx.img | gzip -c > windowsxxxx.gz` > windowsxxx. change to your windows file. 
+Ex : `dd if=windows2022.img | gzip -c > windows2022.gz`
 
 ## 7. Install Apache : 
 
