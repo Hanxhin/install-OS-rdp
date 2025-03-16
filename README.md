@@ -1,6 +1,6 @@
 # TUTORIAL Install OS Windows by SHARE IT HUB
 
-## 1. Script OS downlaoder :
+## 1. Use this scripts :
 ```
 sudo wget https://raw.githubusercontent.com/shareithub/install-OS-rdp/refs/heads/main/install.sh
 ```
