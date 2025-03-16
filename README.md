@@ -13,7 +13,7 @@ chmod +x install.sh
 
 ## 3. After done, connect your IP VPS to VNC
 
-## 4. Install & setting your OS. ( u can check in this video ) >> [YOUTUBE SHARE IT HUB - TUTORIAL INSTALL OS RDP](youtube.com)
+## 4. Install & setting your OS. ( u can check in this video ) >> [YOUTUBE SHARE IT HUB - TUTORIAL INSTALL OS RDP]([youtube.com](https://youtu.be/U-Uhf28c8WA))
 
 ## 5. `CTRL+C` script OS downloader.
 
