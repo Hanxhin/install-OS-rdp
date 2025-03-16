@@ -33,11 +33,11 @@ Ex : `dd if=windows22.img | gzip -c > windows22.gz`
 
 ## 9. Access your file in browser & backup or download your file : 
 
-`cp windowsxxxx.gz /var/www/html/` > windowsxxxx. change your windows file. 
+`cp windowsxx.gz /var/www/html/` > windowsxxxx. change your windows file. 
 
-Ex : `cp windows2022.gz /var/www/html/`
+Ex : `cp windows22.gz /var/www/html/`
 
 ## 10. Open browser & access this. to download your OS Windows after setting : 
 
-`http://127.0.0.1/windowsxxxx.gz` >> change 127.0.0.1 to your IP VPS & windowsxxxx to your windows file
+`http://127.0.0.1/windowsxx.gz` >> change 127.0.0.1 to your IP VPS & windowsxxxx to your windows file
 
