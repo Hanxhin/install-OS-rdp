@@ -106,8 +106,7 @@ elif [ "$choice" -eq 3 ]; then
     sudo mv windows2022.img ${qemu_os}.img
 fi
 
-# Buat file skrip baru untuk menjalankan QEMU (run_qemu.sh)
-sudo bash -c 'cat <<EOF > run_qemu.sh
+sudo bash -c "cat <<EOF > run_qemu.sh
 #!/bin/bash
 qemu-system-x86_64 \\
 -m 4G \\
@@ -120,7 +119,8 @@ qemu-system-x86_64 \\
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \\
 -device usb-tablet \\
 -vnc :0
-EOF'
+EOF"
+
 sudo chmod +x run_qemu.sh
 echo "QEMU run script (run_qemu.sh) created successfully."
 
