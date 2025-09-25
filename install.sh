@@ -79,8 +79,8 @@ sudo qemu-img create -f raw "$img_file" 40G
 echo "Image file $img_file created successfully."
 
 # Download Virtio driver ISO dengan progress realtime
-sudo wget --progress=bar:force -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
-echo "Virtio driver ISO downloaded successfully."
+# sudo wget --progress=bar:force -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
+# echo "Virtio driver ISO downloaded successfully."
 
 # Download Windows ISO dengan progress realtime
 sudo wget --progress=bar:force -O "$iso_file" "$iso_link"
@@ -114,8 +114,6 @@ qemu-system-x86_64 \\
 -enable-kvm \\
 -boot order=d \\
 -drive file=${qemu_os}.iso,media=cdrom \\
--drive file=${qemu_os}.img,format=raw,if=virtio \\
--drive file=virtio-win.iso,media=cdrom \\
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \\
 -device usb-tablet \\
 -vnc :0
