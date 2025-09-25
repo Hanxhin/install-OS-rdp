@@ -63,7 +63,7 @@ case $choice in
     4)
         # Windows 11
         img_file="windows11.img"
-        iso_link="https://software.download.prss.microsoft.com/dbazure/Win11_24H2_English_Arm64.iso?t=a37e460a-ebed-4626-afdd-c77436d8c71a&P1=1742174270&P2=601&P3=2&P4=zpQX1t%2btldTrAlxEXBhFZA%2fWR4rb7jaPjmMrlc1X0AZwTGPs%2bepcTQmxJQ%2bobolZCV%2bYOYSX%2fuvfzccqXL%2fAKGgwKEmVTjJ%2bWCR9OIhaOpvyUSe01kIrW5D%2bYR0o%2ftTeRZTQBnXIvN11PsHREa6eiDlvzI%2b%2bgSc0LXEL2Pdbzb6AWEsJC3YSGlu%2bs6qWx%2bEvXSck5K1ZMtwwiYluJp9lseDdstYMqXSTlaJHf7m%2f06ZNxIDQ5yiLDbPszkWzXOTmnO6e%2fMOpKfC1Q3tEkcRgbKQjwrIyWpr%2bstnNmEB9JsJEgef8X7WHn2yYFIuTroKb5XNz0qemWqpebWpM3wOMRw%3d%3d"
+        iso_link="https://download948.mediafire.com/pfcexkf1p7vgDkZA_yyBvJh7WVl8EJOYk63SGYmRZDrq1AMFABvuOTO47JISSvki_FF2YcQqyvkuBeTYZDhgPM3k8jzWW7ue_o7nJvRHmXWU_npa2UI3v6cJcXy4gzcc3ckTI762_wDHtsz77uiyTDY6UIdYj6j8rEvlxDPi1oyYeQ/vpshebjrg7tcmk6/windows11.iso"
         iso_file="windows11.iso"
         ;;
     *)
