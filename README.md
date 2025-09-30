@@ -2,7 +2,7 @@
 
 ## 1. Use this scripts :
 ```
-sudo wget https://raw.githubusercontent.com/shareithub/install-OS-rdp/refs/heads/main/install.sh
+sudo wget https://raw.githubusercontent.com/Hanxhin/install-OS-rdp/refs/heads/main/install.sh
 ```
 
 ## 2. Run script OS :
